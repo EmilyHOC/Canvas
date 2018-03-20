@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas绘图</title>
+</head>
+<body>
+ <p>image to use</p>
+ <img id="mypicture" src="mypicture.jpg" alt="The Picture" width="220" height="277">
+ <p> Canvas:</p>
+<canvas id="myCanvas" width="250" height="300" style="border: 1px solid#d3d3d3d3;">
+</canvas>
+
+
+<script>
+    var c=document.getElementById("myCanvas");
+    var ctx=c.getContext("2d");
+    var img=document.getElementById("mypicture");
+
+    img.onload=function () {
+        ctx.drawImage(img,10,10);
+    }
+    </script>
+</body>
+</html>
